@@ -77,6 +77,7 @@ function App() {
           placeholder="Titre"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          className="couscous"
         />
         <ReactQuill value={content} onChange={setContent} />
         <button onClick={createNote}>Ajouter</button>
@@ -86,7 +87,7 @@ function App() {
           <h2>Liste des notes</h2>
           <ul>
             {notes.map((note) => (
-              <li key={note.id}>
+              <li className="lili" key={note.id}>
                 {editingNoteId === note.id ? (
                   <>
                     <input
@@ -101,12 +102,25 @@ function App() {
                   </>
                 ) : (
                   <>
-                    <strong>{note.title}</strong>
-                    <p>{note.content}</p>
-                    <button onClick={() => deleteNote(note.id)}>
-                      Supprimer
-                    </button>
-                    <button onClick={() => startEditing(note)}>Editer</button>
+                    <div className="note-content">
+                      <strong>{note.title}</strong>
+                      <p>{note.content}</p>
+                    </div>
+                    <br />
+                    <div className="button-group">
+                      <button
+                        className="but1"
+                        onClick={() => deleteNote(note.id)}
+                      >
+                        Supprimer
+                      </button>
+                      <button
+                        className="but2"
+                        onClick={() => startEditing(note)}
+                      >
+                        Editer
+                      </button>
+                    </div>
                   </>
                 )}
               </li>
