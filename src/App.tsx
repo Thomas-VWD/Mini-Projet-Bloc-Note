@@ -4,7 +4,7 @@ import "./App.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-const apiUrl = process.env.BACKEND_URL || "http://localhost:3000";
+const apiUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
 
 interface Note {
   id: number;
