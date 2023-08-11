@@ -1,0 +1,77 @@
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+button {
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+li {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+strong {
+  font-size: 1.2rem;
+}
+
+.box-note {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+}
