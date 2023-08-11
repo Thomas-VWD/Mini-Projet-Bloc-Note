@@ -101,10 +101,10 @@ function App() {
                     </button>
                   </>
                 ) : (
-                  <>
+                  <div className="box-note">
                     <div className="note-content">
                       <strong>{note.title}</strong>
-                      <p>{note.content}</p>
+                      <div dangerouslySetInnerHTML={{ __html: note.content }} />
                     </div>
                     <br />
                     <div className="button-group">
@@ -121,7 +121,7 @@ function App() {
                         Editer
                       </button>
                     </div>
-                  </>
+                  </div>
                 )}
               </li>
             ))}

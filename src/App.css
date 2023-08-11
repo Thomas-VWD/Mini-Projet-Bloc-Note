@@ -64,6 +64,12 @@ strong {
   font-size: 1.2rem;
 }
 
+.box-note {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 600px) {
   .App {
     padding: 10px;
